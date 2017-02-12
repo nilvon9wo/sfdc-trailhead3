@@ -1,0 +1,57 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" contentType="text/html" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" cache="true">
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+            <!--
+            <apex:includeScript value="{!URLFOR($Resource.Easy, '/cordova/cordova.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.Easy, 'libs/force.js')}"/>
+            -->
+            <script>
+                (function(){
+                    force.login(
+                        function(){
+                            console.info("Auth succeeded");
+                            showUsersList();
+                        },
+                        function(error){
+                            console.error("Auth failed: " + error);
+                        }
+                    );
+                    
+                    function showUsersList = function(){
+                        fetchRecords(function(data){
+                            var users = data.records;
+                            var listItemsHtml = '';
+                            users.forEach(function(user){
+                                listItemsHtml += '<li class="table-view-cell">'
+                                                    + '<div class="media-body">'
+                                                       + user.name
+                                                    + '</div>'
+                                                 +</li>';
+                            });
+                            document.querySelector('#users').innerHTML = listItemsHtml;
+                        });
+                    }
+                    
+                    function fetchRecords = function(successHandler){
+                        var soql = 'SELECT id, name FROM User LIMIT 10';
+                        force.query(soql, successHandler, function(error){
+                            alert('Failed to fetch users: ' + error);
+                        });
+                    }
+                })();
+            </script>
+        </head>
+        <body>
+            <header>
+                <h1>Hello, Visualforce!</h1>
+            </header>
+            
+            <ul id="users">
+            </ul>
+            
+            <p>Welcome to Mobile SDK.</p>
+        </body>
+    </html>
+</apex:page>
