@@ -1,5 +1,4 @@
 global class HRKU_RealEstateConnection extends DataSource.Connection {
-
 	private final String REAL_ESTATE_SITE = 'https://ionic2-reality-rest-demo.herokuapp.com';
 
 	HRKU_Datasource dataSource;
@@ -38,9 +37,7 @@ global class HRKU_RealEstateConnection extends DataSource.Connection {
     	HttpRequest httpRequest = new HttpRequest(); 
     	httpRequest.setEndPoint(REAL_ESTATE_SITE + '/properties/');
     	httpRequest.setMethod('GET');
-    	
-    	Http httpProtocol = new Http();
-    	HttpResponse httpResponse = httpProtocol.send(httpRequest);
+    	HttpResponse httpResponse = (new Http()).send(httpRequest);
     	
     	List<Map<String, Object>> propertyByNameMapList = new List<Map<String, Object>>();
     	for (Object item: (List<Object>)JSON.deserializeUntyped(httpResponse.getBody())) {
