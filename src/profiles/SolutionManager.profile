@@ -1586,6 +1586,10 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
+        <apexPage>BasicCanvasApp</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>HybridPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -1806,6 +1810,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SolutionImport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeToLightningReports</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

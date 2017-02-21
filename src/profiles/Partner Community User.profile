@@ -1577,6 +1577,10 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
+        <apexPage>BasicCanvasApp</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>HybridPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>

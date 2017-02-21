@@ -1604,6 +1604,10 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
+        <apexPage>BasicCanvasApp</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>HybridPage</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -2152,6 +2156,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SubmitMacrosAllowed</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeToLightningReports</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

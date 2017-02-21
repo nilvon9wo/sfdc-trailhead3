@@ -1442,6 +1442,10 @@
         <layout>WorkPerformanceCycle-Performance Cycle Layout - Winter %2716</layout>
     </layoutAssignments>
     <pageAccesses>
+        <apexPage>BasicCanvasApp</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>HybridPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>

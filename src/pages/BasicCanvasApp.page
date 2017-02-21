@@ -1,0 +1,9 @@
+<apex:page >
+    <script type="text/javascript" src="https://eu6.salesforce.com/canvas/sdk/js/36.0/canvas-all.js"></script>
+    <script>
+        Sfdc.canvas(function(){
+            Sfdc.canvas.oauth.token(window.signedRequestJson.oauthToken);
+            window.alert('hello, ' + window.signedRequestJson.context.user.fullName);
+        });
+    </script>
+</apex:page>
